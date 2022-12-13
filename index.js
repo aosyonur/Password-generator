@@ -94,8 +94,17 @@ const characters = [
 
 let passwordOne = document.getElementById("password-one");
 let passwordTwo = document.getElementById("password-two");
+let passwordLength = "";
 
-let passwordLength = 12;
+// SELECT LENGHT SECTION //
+
+let selectLenght = document.getElementById("pw-select");
+selectLenght.addEventListener("change", function () {
+  let lenghtValue = selectLenght.value;
+  passwordLength = lenghtValue;
+});
+
+// =================== //
 
 function getRandomCharacter() {
   let randomCharacter = Math.floor(Math.random() * characters.length);
@@ -112,6 +121,18 @@ function generate() {
   passwordOne.textContent = randomPasswordOne;
   passwordTwo.textContent = randomPasswordTwo;
 }
+
+//COPY SECTION //
+passwordOne.addEventListener("click", function () {
+  navigator.clipboard.writeText(passwordOne.textContent);
+  alert("Password one copied.");
+});
+
+passwordTwo.addEventListener("click", function () {
+  navigator.clipboard.writeText(passwordTwo.textContent);
+  alert("Password two copied.");
+});
+//=============//
 
 // IT WORKS LIKE THIS TOO WITHOUT "getRandomCharacter function" //
 

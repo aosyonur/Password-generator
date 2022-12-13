@@ -5,12 +5,14 @@ body {
 }
 
 .container {
-  width: 550px;
-  height: 550px;
-  background: #1f2937;
+  width: 100vw;
+  height: 100vh;
+  background: #00253a;
   margin: auto;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 h1 {
@@ -19,10 +21,10 @@ h1 {
 }
 .header-white {
   margin-bottom: 0px;
-  margin-top: 115px;
+  margin-top: 70px;
 }
 .header-green {
-  color: #4adf86;
+  color: #F43F5E;
   margin-top: 0px;
 }
 .subheader {
@@ -36,7 +38,7 @@ h1 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  background: #10b981;
+  background: #f64a67;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   color: white;
@@ -45,15 +47,40 @@ h1 {
   margin-bottom: 35px;
 }
 
+label {
+  font-size: 16px;
+  font-weight: 800;
+  color: #d5d4d8;;
+  margin-right: 35px;
+}
+
+select {
+  background-color: #0C4A6E;
+  color:#F43F5E;
+  border-radius: 6px;
+  border: 1px solid #2F3E53;
+  border: none;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+select option {
+  font-weight: bold;
+  /* font-size: 30px; */
+}
+
 .main {
   /* margin-top: 115px; */
   margin-left: 50px;
   margin-right: 50px;
-  border-bottom: 1px solid #2F3E53;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #0C4A6E;
 }
 
 .password-container {
-  margin: 35px 50px 0px 50px;
+  margin: 50px 50px 0px 50px;
 }
 
 .pwone {
@@ -61,7 +88,7 @@ h1 {
     justify-content: space-around;
 }
 .pwone p {
-    background: #273549;
+    background: #0C4A6E;;
     width: 211px;
     height: 40px;
     text-align: center;
@@ -69,7 +96,13 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    color: #55F991;
+    color: #f64a67;
+    cursor: pointer;
+}
+
+.pwone p:hover {
+  background: #3b4f6c;
+  color: #a5f4c2;
 }
 
 #password-two {
